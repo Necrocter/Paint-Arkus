@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -69,6 +69,9 @@
                                 <state key="normal" title="Darken">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onDarken:" destination="BYZ-38-t0r" eventType="touchUpInside" id="02P-QR-9ci"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JCn-hm-ET6">
                                 <rect key="frame" x="218.5" y="505" width="98" height="38"/>
@@ -80,6 +83,9 @@
                                 <state key="normal" title="Brightness">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onBrightness:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bX6-WU-VmN"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qHD-A8-dRc">
                                 <rect key="frame" x="138.5" y="565" width="98" height="38"/>
@@ -91,6 +97,9 @@
                                 <state key="normal" title="Randomize">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="onRandomize:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oqG-CO-55T"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -110,8 +119,11 @@
                         <viewLayoutGuide key="safeArea" id="fZT-XH-vLm"/>
                     </view>
                     <connections>
+                        <outlet property="blueUISlider" destination="vs0-Vv-gcH" id="mzO-jc-a3S"/>
                         <outlet property="colorLabel" destination="ulj-xy-saH" id="DcZ-kf-0Lj"/>
                         <outlet property="colorView" destination="0SL-5T-Qnj" id="oAT-iJ-GAY"/>
+                        <outlet property="greenUiSlider" destination="r4P-0d-kYW" id="cQf-O4-osM"/>
+                        <outlet property="redUISlider" destination="Z2o-z0-PnG" id="zAB-KA-LJV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

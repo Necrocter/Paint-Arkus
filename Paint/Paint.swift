@@ -9,11 +9,11 @@
 import UIKit.UIColor
 
 struct Paint {
-    var red: Double
-    var green: Double
-    var blue: Double
+    var red: Float
+    var green: Float
+    var blue: Float
     
-    init(red: Double, green: Double, blue: Double) {
+    init(red: Float, green: Float, blue: Float) {
         self.red = red
         self.green = green
         self.blue = blue
@@ -22,7 +22,7 @@ struct Paint {
 
 extension Paint {
     
-    private static func clamp(_ input: Double) -> Double {
+    private static func clamp(_ input: Float) -> Float {
         min(max(input, 0), 1)
     }
     
@@ -39,13 +39,13 @@ extension Paint {
     }
     
     mutating func randomize() {
-        red = Double.random(in: 0...1)
-        green = Double.random(in: 0...1)
-        blue = Double.random(in: 0...1)
+        red = Float.random(in: 0...1)
+        green = Float.random(in: 0...1)
+        blue = Float.random(in: 0...1)
     }
     
-    private static func toHexString(_ input: Double, prefix: Bool = true) -> String {
-        let value = UInt8(input * 255.rounded((.down)))
+    private static func toHexString(_ input: Float, prefix: Bool = true) -> String {
+        let value = UInt8(input * Float(255).rounded(.down))
         return prefix ? String(format: "0x%02X", value) : String(format: "%02X", value)
     }
     
