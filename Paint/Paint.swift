@@ -18,6 +18,12 @@ struct Paint {
         self.green = green
         self.blue = blue
     }
+    
+    init() {
+        self.red = 0
+        self.green = 0
+        self.blue = 0
+    }
 }
 
 extension Paint {

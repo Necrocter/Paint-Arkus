@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PaintDetailViewController: UIViewController {
     
     @IBOutlet weak var colorView: UIView!
     @IBOutlet weak var colorLabel: UILabel!
@@ -18,15 +18,14 @@ class ViewController: UIViewController {
     
     
     // FIXME: Temporary variable
-    var paint = Paint(red: 0, green: 0, blue: 0)
+    var paint: Paint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        paint.randomize()
+    override func viewDidAppear(_ animated: Bool) {
         updateColorView()
         redUISlider.value = paint.red
         greenUiSlider.value = paint.green
