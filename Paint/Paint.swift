@@ -68,3 +68,10 @@ extension Paint {
     }
 }
 
+extension Paint: Equatable {
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        lhs.red == rhs.red &&
+            lhs.green == rhs.green &&
+            lhs.blue == rhs.blue
+    }
+}

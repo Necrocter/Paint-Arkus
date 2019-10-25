@@ -15,6 +15,7 @@
 		1C60F2E5235F7F8B00C81ACB /* PaintTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60F2E4235F7F8B00C81ACB /* PaintTableViewController.swift */; };
 		1C60F2E7235F88E000C81ACB /* PaintTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C60F2E6235F88E000C81ACB /* PaintTableViewCell.swift */; };
 		1C743B0A234D128E00DC4F2C /* Paint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C743B09234D128E00DC4F2C /* Paint.swift */; };
+		3318E6B62362254B0028AD48 /* PaintDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3318E6B52362254B0028AD48 /* PaintDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		1C60F2E4235F7F8B00C81ACB /* PaintTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintTableViewController.swift; sourceTree = "<group>"; };
 		1C60F2E6235F88E000C81ACB /* PaintTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintTableViewCell.swift; sourceTree = "<group>"; };
 		1C743B09234D128E00DC4F2C /* Paint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Paint.swift; sourceTree = "<group>"; };
+		3318E6B52362254B0028AD48 /* PaintDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaintDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,14 +63,15 @@
 			isa = PBXGroup;
 			children = (
 				1C3D04942331C673004E613B /* AppDelegate.swift */,
-				1C3D04962331C673004E613B /* PaintDetailViewController.swift */,
 				1C3D04982331C673004E613B /* Main.storyboard */,
 				1C3D049B2331C675004E613B /* Assets.xcassets */,
 				1C3D049D2331C675004E613B /* LaunchScreen.storyboard */,
 				1C3D04A02331C675004E613B /* Info.plist */,
 				1C743B09234D128E00DC4F2C /* Paint.swift */,
 				1C60F2E4235F7F8B00C81ACB /* PaintTableViewController.swift */,
+				1C3D04962331C673004E613B /* PaintDetailViewController.swift */,
 				1C60F2E6235F88E000C81ACB /* PaintTableViewCell.swift */,
+				3318E6B52362254B0028AD48 /* PaintDelegate.swift */,
 			);
 			path = Paint;
 			sourceTree = "<group>";
@@ -145,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C60F2E5235F7F8B00C81ACB /* PaintTableViewController.swift in Sources */,
+				3318E6B62362254B0028AD48 /* PaintDelegate.swift in Sources */,
 				1C60F2E7235F88E000C81ACB /* PaintTableViewCell.swift in Sources */,
 				1C3D04972331C673004E613B /* PaintDetailViewController.swift in Sources */,
 				1C3D04952331C673004E613B /* AppDelegate.swift in Sources */,

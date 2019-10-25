@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Paint
-//
-//  Created by Julio Barrera on 9/17/19.
-//  Copyright © 2019 Julio Barrera. All rights reserved.
-//
-
 import UIKit
 
 class PaintDetailViewController: UIViewController {
@@ -16,9 +8,12 @@ class PaintDetailViewController: UIViewController {
     @IBOutlet weak var greenUiSlider: UISlider!
     @IBOutlet weak var blueUISlider: UISlider!
     
+    // MARK: - Stored Properties
+    var delegate: PaintDelegate?
     
     // FIXME: Temporary variable
     var paint: Paint!
+    private var originalPaint: Paint!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,40 +22,54 @@ class PaintDetailViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         updateColorView()
+        originalPaint = paint
         redUISlider.value = paint.red
         greenUiSlider.value = paint.green
         blueUISlider.value = paint.blue
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        if originalPaint != paint {
+            delegate?.onPaintChanged(paint)
+        }
+    }
+    
     @IBAction func onRedSliderChanged(_ sender: UISlider) {
         paint.red = sender.value
+        //delegate?.onPaintChanged(paint)
         updateColorView()
     }
     
     @IBAction func onGreenSliderChanged(_ sender: UISlider) {
         paint.green = sender.value
+        //delegate?.onPaintChanged(paint)
         updateColorView()
     }
     
     @IBAction func onBlueSliderChanged(_ sender: UISlider) {
         paint.blue = sender.value
+        //delegate?.onPaintChanged(paint)
         updateColorView()
     }
     
     @IBAction func onDarken(_ sender: Any) {
         paint.darken()
+        //delegate?.onPaintChanged(paint)
         updateColorView()
         updateSliders()
     }
     
     @IBAction func onBrightness(_ sender: Any) {
         paint.brighten()
+        //delegate?.onPaintChanged(paint)
         updateColorView()
         updateSliders()
     }
     
     @IBAction func onRandomize(_ sender: Any) {
         paint.randomize()
+        //delegate?.onPaintChanged(paint)
         updateColorView()
         updateSliders()
     }
